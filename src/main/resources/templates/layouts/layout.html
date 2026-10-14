@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:fragment="layoutBase(contenido)">
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layoutBase(contenido, contentAside)">
 
 <head>
 	<meta charset="UTF-8">
@@ -50,6 +50,8 @@
 	<main style="padding: 70px;">
 		<div class="container mt-5 pt-5 text-white" th:replace="${contenido}">[Contenido aquí]</div>
 	</main>
+	
+	<aside th:replace="${contentAside}"></aside>
 
 	<script th:src="@{/js/validacion-bootstrap.js}"></script>
 	

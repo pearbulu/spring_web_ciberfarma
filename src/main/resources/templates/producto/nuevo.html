@@ -19,7 +19,8 @@
 				<h1 class="card-title text-center">Producto Nuevo</h1>
 				<div class="row d-flex justify-content-center">
 					<div class="col-md-6">
-						<form th:action="@{/producto/registrar}" class="row g-2" method="post" novalidate th:object="${producto}">
+						<form th:action="@{/producto/registrar}" class="row g-2" method="post" novalidate
+							th:object="${producto}">
 							<div class="col-md-12 position-relative">
 								<label for="descripcion" class="form-label"> Descripción </label>
 								<input type="text" class="form-control" placeholder="Ingrese una descripción"
@@ -31,8 +32,7 @@
 									<span class="input-group-text">
 										<i class="fa-solid fa-cubes-stacked"></i>
 									</span>
-									<input class="form-control" type="number" placeholder="0"
-										th:field="*{stock}">
+									<input class="form-control" type="number" placeholder="0" th:field="*{stock}">
 								</div>
 							</div>
 							<div class="col-md-6 position-relative">
@@ -51,8 +51,7 @@
 									</span>
 									<select class="form-select" th:field="*{categoria}">
 										<option value="" selected hidden="hidden">--Seleccione--</option>
-										<option th:each="item: ${lstCategorias}" 
-											th:value="${item.idCategoria}"
+										<option th:each="item: ${lstCategorias}" th:value="${item.idCategoria}"
 											th:text="${item.descripcion}">
 										</option>
 									</select>
@@ -64,8 +63,7 @@
 									<span class="input-group-text"><i class="fa-solid fa-truck-fast"></i></span>
 									<select class="form-select" th:field="*{proveedor}">
 										<option value="" selected hidden="hidden">--Seleccione--</option>
-										<option th:each="item: ${lstProveedores}" 
-											th:value="${item.idProveedor}"
+										<option th:each="item: ${lstProveedores}" th:value="${item.idProveedor}"
 											th:text="${item.razonSocial}">
 										</option>
 									</select>
@@ -122,3 +120,5 @@
 				});
 	</script>
 </body>
+
+</html>
