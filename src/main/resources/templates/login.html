@@ -24,7 +24,7 @@
 					<div class="card-body">
 						<h5 class="text-center mb-4">Inicio de Sesión</h5>
 
-						<form th:action="@{/iniciar-sesion}" method="get">
+						<form th:action="@{/iniciar-sesion}" method="get" th:object="${filter}">
 
 							<div class="mb-3">
 								<label class="form-label">Cuenta</label>
@@ -32,10 +32,10 @@
 									<span class="input-group-text">
 										<i class="fa-solid fa-user"></i>
 									</span>
-									<input type="text" class="form-control" placeholder="Ingrese su cuenta">
+									<input type="text" class="form-control" placeholder="Ingrese su cuenta"
+										th:field="*{cuenta}">
 								</div>
 							</div>
-
 
 							<div class="mb-3">
 								<label class="form-label">Contraseña</label>
@@ -44,7 +44,8 @@
 									<span class="input-group-text">
 										<i class="fa-solid fa-key"></i>
 									</span>
-									<input type="password" class="form-control" placeholder="Ingrese su contraseña">
+									<input type="password" class="form-control" placeholder="Ingrese su contraseña"
+										th:field="*{clave}">
 								</div>
 							</div>
 
